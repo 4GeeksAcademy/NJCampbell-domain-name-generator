@@ -5,10 +5,10 @@ window.onload = () => {
 };
 
 let generateDomainName = () => {
-  let pronoun = ["the", "our"];
-  let adjective = ["big", "greatest", "beautiful", "smallest", "blue"];
-  let noun = ["book", "waterbear", "mountain", "mile", "vista"];
-  let extension = [".com", ".edu", ".net"];
+  let pronoun = ["the", "our", "your"];
+  let adjective = ["big", "greatest", "beautiful", "smallest", "blue", "best"];
+  let noun = ["book", "waterbear", "mountain", "mile", "guitar", "vista"];
+  let extension = [".com", ".net", ".edu", ".gov"];
 
   let pronounIndex = Math.floor(Math.random() * pronoun.length);
   let adjectiveIndex = Math.floor(Math.random() * adjective.length);
@@ -17,20 +17,20 @@ let generateDomainName = () => {
 
   for (let pronounIndex = 0; pronounIndex < pronoun.length; pronounIndex++) {
     for (
-      adjectiveIndex = 0;
+      let adjectiveIndex = 0;
       adjectiveIndex < adjective.length;
       adjectiveIndex++
     ) {
       for (let nounIndex = 0; nounIndex < noun.length; nounIndex++) {
         for (
-          extensionIndex = 0;
+          let extensionIndex = 0;
           extensionIndex < extension.length;
           extensionIndex++
-        );
+        ) {}
       }
     }
-    return `${pronoun[pronounIndex]} ${adjective[adjectiveIndex]} ${noun[nounIndex]} ${extension[extensionIndex]}`;
   }
+  return `${pronoun[pronounIndex]}${adjective[adjectiveIndex]}${noun[nounIndex]}${extension[extensionIndex]}`;
 };
 
 const output = generateDomainName();
