@@ -26,7 +26,9 @@ let generateDomainName = () => {
           let extensionIndex = 0;
           extensionIndex < extension.length;
           extensionIndex++
-        ) {}
+        ) {
+          console.log;
+        }
       }
     }
   }
